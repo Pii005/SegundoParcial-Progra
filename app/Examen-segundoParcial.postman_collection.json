@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "ed62fa5a-9cfb-4595-ac03-abeb317d2082",
+		"name": "Examen-segundoParcial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34250217"
+	},
+	"item": [
+		{
+			"name": "1era Parte",
+			"item": [
+				{
+					"name": "“/tienda/alta”:",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Iphone 15 Pro Max",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "1170",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "Smartphone",
+									"type": "text"
+								},
+								{
+									"key": "marca",
+									"value": "Apple",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "47",
+									"type": "text"
+								},
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "postman-cloud:///1ef1890b-48b7-43d0-88d3-bbce9af5f7f1"
+								}
+							]
+						},
+						"url": "http://localhost:777/tienda/cargar"
+					},
+					"response": []
+				},
+				{
+					"name": "“/tienda/consultar”:",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Iphone 15 Pro Max",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "Smartphone",
+									"type": "text"
+								},
+								{
+									"key": "marca",
+									"value": "Apple",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:777/tienda/consultar"
+					},
+					"response": []
+				},
+				{
+					"name": "/ventas/alta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "margarita@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Iphone 15 Pro Max",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "Smartphone",
+									"type": "text"
+								},
+								{
+									"key": "marca",
+									"value": "Apple",
+									"type": "text"
+								},
+								{
+									"key": "cantidad",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "postman-cloud:///1ef1890b-48b7-43d0-88d3-bbce9af5f7f1"
+								}
+							]
+						},
+						"url": "http://localhost:777/ventas/alta"
+					},
+					"response": []
+				},
+				{
+					"name": "/ventas/vendidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:777/ventas/vendidos"
+					},
+					"response": []
+				},
+				{
+					"name": "/ventas/porUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:777/ventas/porUsuario?email=margarita@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "777",
+							"path": [
+								"ventas",
+								"porUsuario"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "margarita@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ventas/porProducto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:777/ventas/porProducto?nombre=15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "777",
+							"path": [
+								"ventas",
+								"porProducto"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ventas/entreValores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:777/ventas/entreValores?minimo=1&maximo=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "777",
+							"path": [
+								"ventas",
+								"entreValores"
+							],
+							"query": [
+								{
+									"key": "minimo",
+									"value": "1"
+								},
+								{
+									"key": "maximo",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/registro/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "margara",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "MArga12412",
+									"type": "text"
+								},
+								{
+									"key": "mail",
+									"value": "Marga@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "perfil",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "postman-cloud:///1ef18935-2943-4b00-9c12-7d18a7d81a76"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:777/registro/?nombre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "777",
+							"path": [
+								"registro",
+								""
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/registro/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "Marga@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:777/registro/login"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

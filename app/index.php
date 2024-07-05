@@ -17,6 +17,7 @@ require_once './db/AccesoDatos.php';
 
 require_once './controllers/controlerProductos.php';
 require_once './controllers/controlerVenta.php';
+require_once './controllers/controlerUsuario.php';
 
 require_once './middlewares/middProductos.php';
 
@@ -68,6 +69,10 @@ $app->group('/ventas', function (RouteCollectorProxy $group) {
 Debe recibir el número de pedido, el email del usuario, el nombre, tipo, marca y cantidad. Si existe (por numero
 de pedido) se modifican el resto de los datos, de lo contrario, informar que no existe ese número de pedido.*/
 
+$app->group('/registro', function (RouteCollectorProxy $group) {
+  $group->post('/', \ControlerUsuario::class . ':ingresarUsuario');
+  $group->post('/login', \ControlerUsuario::class . ':loginUser');
+});
 
 
 $app->get('[/]', function (Request $request, Response $response) {    
